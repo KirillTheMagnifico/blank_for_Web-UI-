@@ -1,0 +1,1 @@
+{"uuid":"11508966-fecf-425d-b43e-d3b71da1ba3c","name":"CheckImageTest","children":["0437a126-4d42-4aa8-8ad8-6c624783e47f"],"befores":[{"name":"configure","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1709409595526,"stop":1709409595567}],"afters":[],"start":1709409595514,"stop":1709409595727}

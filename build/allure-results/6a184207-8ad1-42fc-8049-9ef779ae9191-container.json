@@ -1,0 +1,1 @@
+{"uuid":"6a184207-8ad1-42fc-8049-9ef779ae9191","name":"CheckLogoTest","children":["33e1a12d-b9e2-45cc-8902-88042c3e27fd"],"befores":[{"name":"configure","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1709410219428,"stop":1709410219472}],"afters":[],"start":1709410219419,"stop":1709410219636}

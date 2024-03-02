@@ -4,25 +4,29 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.withText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
+
+
+import org.openqa.selenium.By;
+import pages.MainPage;
+
 public class MainPage {
 
 
 
     //locators
-    private SelenideElement mainLogo = $(""),
+    private SelenideElement mainLogo = $x("/html/body/div[1]/div[1]/div[1]/div/div[3]/div/div[2]/div/div/a/img"),
             emailButton = $(".form-row_block").$("button"),
-            emptyInputError = $(".form-row_block").$(".rich-text-input__error"),
+         emptyInputError = $(".form-row_block").$(".rich-text-input__error"),
             searchBar = $(""),
-            bannerImage = $(""),
+            bannerImage = $("img.micro-banner third").shouldBe(visible),
             aboutUsLink = $("").$(withText("О компании"));
 
     //actions
     public MainPage openPage() {
         step("Открытие главной страницы сайта Окей", () -> {
-            open("https://www.okeydostavka.ru/");
+            open("https://www.okeydostavka.ru/msk");
         });
         return this;
     }
@@ -30,6 +34,7 @@ public class MainPage {
     public MainPage checkLogo() {
         step("Проверка видимости логотипа", () -> {
             mainLogo.shouldBe(visible);
+            bannerImage.shouldBe(visible);
         });
         return this;
     }
