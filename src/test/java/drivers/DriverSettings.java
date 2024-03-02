@@ -20,12 +20,12 @@ public class DriverSettings {
         chromeOptions.addArguments("--disable-notifications");
         chromeOptions.addArguments("--lang=en-en");
 
-        String remoteUrl = Project.config.remoteDriverUrl();
-        if (remoteUrl != null) {
-            capabilities.setCapability("enableVNC", true);
-            capabilities.setCapability("enableVideo", true);
+        //String remoteUrl = Project.config.remoteDriverUrl();
+        //if (remoteUrl != null) {
+         //   capabilities.setCapability("enableVNC", true);
+          //  capabilities.setCapability("enableVideo", true);
 
-        }
+       // }
 
         capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
         Configuration.browserCapabilities = capabilities;

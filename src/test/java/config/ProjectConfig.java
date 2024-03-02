@@ -11,14 +11,17 @@ import org.aeonbits.owner.Config;
 
 public interface ProjectConfig extends Config {
 
-    @DefaultValue("https://www.google.com/")
+    @DefaultValue("https://www.okeydostavka.ru/")
     String baseUrl();
     @DefaultValue("chrome")
     String browser();
     @DefaultValue("1920x1080")
     String browserSize();
+
     @DefaultValue("121.0")
-    String remoteDriverUrl();
+    default String remoteDriverUrl() {
+        return null;
+    }
     //String userEmail();
     //String userPassword();
 }
